@@ -20,7 +20,7 @@ body
 {
    line-height: 1.5;
    font-size: 16px;
-   font-family: 'Poppins' sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 *
 {
@@ -707,7 +707,18 @@ h3.my-profession
    height: 50px;
    padding: 0 50px;
 }
-
+.sr-only
+{
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
+}
 
 @media (max-width=1199px)
 {
@@ -750,7 +761,7 @@ h3.my-profession
 @media (max-width=991px)
 {
    .contact .contact-info-item,
-   .portofolio .portofolio-item,
+   .portfolio .portfolio-item,
    .service .service-item
    {
       flex: 0 0 50%;
@@ -770,7 +781,7 @@ h3.my-profession
 {
    .contact .contact-info-item,
    .contact .contact-form .col-6,
-   .portofolio .portofolio-item,
+   .portfolio .portfolio-item,
    .service .service-item,
    .about .about-content .experience,
    .about .about-content .education,
