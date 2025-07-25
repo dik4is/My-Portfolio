@@ -28,7 +28,7 @@ for(let i=0; i<totalNavList; i++)
         }
         this.classList.add("active")
         showSection(this);
-        if(window.innerWidth <1200)
+        if(window.innerWidth <992)
         {
             asideSectionTogglerBtn();
         }
@@ -89,8 +89,35 @@ function asideSectionTogglerBtn()
     {
         allSection[i].classList.toggle("open");
     }
+    if(window.innerWidth < 992)
+    {
+        document.body.classList.toggle("slidebar-open");
+    }
 }
-
+document.addEventListener("click", function(e)
+{
+    if (window.innerWidth < 992)
+    {
+        if (aside.classList.contains("open") && 
+        !aside.contains(e.target) && 
+        !navTogglerBtn.contains(e.target))
+        {
+            asideSectionTogglerBtn();
+        }
+    }
+});
+window.addEventListener("resize", function()
+{
+    if(window.innerWidth >= 992 && aside.classList.contains("open"))
+    {
+        navTogglerBtn.classList.remove("open");
+        document.body.classList.remove("slidebar-open");
+        for(let i=0; i<totalSection; i++)
+        {
+            allSection[i].classList.remove("open");
+        }
+    }
+});
 
 
 
