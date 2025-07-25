@@ -1,17 +1,17 @@
 /*========== TYPING ANIMATION JS ==========*/
 var typed = new Typed(".typing",{
-    strings:["Web Design", "Web Developer", "Gaphic Design", "IT Support", "Network Security", "Programer"],
+    strings:["Web Design", "Web Developer", "Graphic Design", "IT Support", "Network Security", "Programmer"],
     typeSpeed: 100,
-    BackSpeed: 60,
+    backSpeed: 60,
     loop: true
 })
-/*========== TYPING ANIMATION JS ==========*/
+/*========== NAVIGATION JS ==========*/
 const nav = document.querySelector(".nav"),
-navList = nav.querySelectorAll(".li"),
+navList = nav.querySelectorAll("li"),
 totalNavList = navList.length;
 for(let i=0; i<totalNavList; i++)
 {
-    const = navList[i].querySelector(".a");
+    const a = navList[i].querySelector("a");
     a.addEventListener("click", function()
     {
         for(let j=0; j<totalNavList; j++)
