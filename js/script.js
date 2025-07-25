@@ -89,10 +89,7 @@ function asideSectionTogglerBtn()
     {
         allSection[i].classList.toggle("open");
     }
-    if(window.innerWidth < 992)
-    {
-        document.body.classList.toggle("slidebar-open");
-    }
+    document.body.classList.toggle("slidebar-open");
 }
 document.addEventListener("click", function(e)
 {
@@ -108,15 +105,7 @@ document.addEventListener("click", function(e)
 });
 window.addEventListener("resize", function()
 {
-    if(window.innerWidth >= 992 && aside.classList.contains("open"))
-    {
-        navTogglerBtn.classList.remove("open");
-        document.body.classList.remove("slidebar-open");
-        for(let i=0; i<totalSection; i++)
-        {
-            allSection[i].classList.remove("open");
-        }
-    }
+    
 });
 
 
