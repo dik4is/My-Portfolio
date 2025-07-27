@@ -1,6 +1,6 @@
 /*========== TYPING ANIMATION JS ==========*/
-var typed = new Typed(".typing",{
-    strings:["Web Design", "Web Developer", "Gaphic Design", "IT Support", "Network Security", "Programer"],
+const typed = new Typed(".typing",{
+    strings:["Web Design", "Web Developer", "Graphic Design", "IT Support", "Network Security", "Programmer"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true
@@ -69,7 +69,6 @@ function updateNav(element)
 document.querySelector(".hire-me").addEventListener("click", function()
 {
     const sectionIndex = this.getAttribute("data-section-index");
-    //consol.log(sectionIndex);
     showSection(this);
     updateNav(this);
     removeBackSection();
