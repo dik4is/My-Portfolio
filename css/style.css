@@ -754,6 +754,50 @@ h3.my-profession{
    }
 }
 
+@media (max-width: 600px) {
+  .aside {
+    width: 220px;
+    left: -220px;
+    top: 0;
+    height: 100vh;
+    z-index: 1001;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    transition: left 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .aside.open {
+    left: 0;
+  }
+  .aside .nav-toggler {
+    display: flex !important;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 1100;
+  }
+  .main-content, .section {
+    filter: none;
+    transition: filter 0.3s;
+  }
+  body.sidebar-open .main-content,
+  body.sidebar-open .section {
+    filter: blur(2px) brightness(0.8);
+    pointer-events: none;
+    user-select: none;
+  }
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: opacity 0.3s;
+  }
+  .sidebar-backdrop.hide {
+    display: none;
+    opacity: 0;
+  }
+}
+
 
 
 

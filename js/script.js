@@ -77,6 +77,8 @@ document.querySelector(".hire-me").addEventListener("click", function()
 })
 const navTogglerBtn = document.querySelector(".nav-toggler"),
 aside = document.querySelector(".aside");
+const sidebarBackdrop = document.querySelector('.sidebar-backdrop');
+
 navTogglerBtn.addEventListener("click", () => 
 {
     asideSectionTogglerBtn();
@@ -89,6 +91,24 @@ function asideSectionTogglerBtn()
     {
         allSection[i].classList.toggle("open");
     }
+    // Mobile sidebar backdrop and body class
+    if (window.innerWidth <= 600) {
+        if (aside.classList.contains('open')) {
+            document.body.classList.add('sidebar-open');
+            if (sidebarBackdrop) sidebarBackdrop.classList.remove('hide');
+        } else {
+            document.body.classList.remove('sidebar-open');
+            if (sidebarBackdrop) sidebarBackdrop.classList.add('hide');
+        }
+    }
+}
+
+if (sidebarBackdrop) {
+    sidebarBackdrop.addEventListener('click', function() {
+        if (aside.classList.contains('open')) {
+            asideSectionTogglerBtn();
+        }
+    });
 }
 
 
