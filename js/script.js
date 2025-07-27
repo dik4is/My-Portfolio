@@ -1,8 +1,8 @@
 /*========== TYPING ANIMATION JS ==========*/
 var typed = new Typed(".typing",{
-    strings:["Web Design", "Web Developer", "Graphic Design", "IT Support", "Network Security", "Programmer"],
+    strings:["Web Design", "Web Developer", "Gaphic Design", "IT Support", "Network Security", "Programer"],
     typeSpeed: 100,
-    backSpeed: 60,
+    BackSpeed: 60,
     loop: true
 })
 /*========== TYPING ANIMATION JS ==========*/
@@ -28,7 +28,7 @@ for(let i=0; i<totalNavList; i++)
         }
         this.classList.add("active")
         showSection(this);
-        if(window.innerWidth <992)
+        if(window.innerWidth <1200)
         {
             asideSectionTogglerBtn();
         }
@@ -69,7 +69,7 @@ function updateNav(element)
 document.querySelector(".hire-me").addEventListener("click", function()
 {
     const sectionIndex = this.getAttribute("data-section-index");
-    //console.log(sectionIndex);
+    //consol.log(sectionIndex);
     showSection(this);
     updateNav(this);
     removeBackSection();
@@ -81,7 +81,7 @@ navTogglerBtn.addEventListener("click", () =>
 {
     asideSectionTogglerBtn();
 })
-function asideSectionTogglerBtn()
+fuction asideSectionTogglerBtn()
 {
     aside.classList.toggle("open");
     navTogglerBtn.classList.toggle("open");
@@ -89,24 +89,8 @@ function asideSectionTogglerBtn()
     {
         allSection[i].classList.toggle("open");
     }
-    document.body.classList.toggle("slidebar-open");
 }
-document.addEventListener("click", function(e)
-{
-    if (window.innerWidth < 992)
-    {
-        if (aside.classList.contains("open") && 
-        !aside.contains(e.target) && 
-        !navTogglerBtn.contains(e.target))
-        {
-            asideSectionTogglerBtn();
-        }
-    }
-});
-window.addEventListener("resize", function()
-{
-    
-});
+
 
 
 
