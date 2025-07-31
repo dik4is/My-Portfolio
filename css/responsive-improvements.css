@@ -1,0 +1,127 @@
+/* Additional responsive improvements for better touch targets */
+@media (max-width: 767px)
+{
+   .aside .nav li a
+   {
+      padding: 8px 15px;
+      font-size: 16px;
+   }
+   .btn
+   {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .contact .contact-form .form-item .form-control
+   {
+      min-height: 44px;
+   }
+   .service .service-item .service-item-inner
+   {
+      padding: 20px 15px;
+   }
+   .portofolio .portofolio-item-inner
+   {
+      border-width: 4px;
+   }
+   .about .about-content .skills .skill-item .progress
+   {
+      height: 8px;
+   }
+   .about .about-content .skills .skill-item .skill-percent
+   {
+      font-size: 14px;
+   }
+   .contact .contact-info-item .icon .fa
+   {
+      font-size: 20px;
+   }
+   .contact .contact-info-item h4
+   {
+      font-size: 16px;
+   }
+   .contact .contact-info-item p
+   {
+      font-size: 14px;
+   }
+   .service .service-item .service-item-inner h4
+   {
+      font-size: 16px;
+   }
+   .service .service-item .service-item-inner p
+   {
+      font-size: 14px;
+   }
+   .about .about-content .about-text h3
+   {
+      font-size: 20px;
+   }
+   .about .about-content .about-text p
+   {
+      font-size: 14px;
+   }
+}
+
+/* Landscape orientation fixes for mobile */
+@media (max-width: 767px) and (orientation: landscape)
+{
+   .section .container
+   {
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+   .home
+   {
+      min-height: auto;
+      padding: 40px 0;
+   }
+   .aside .logo
+   {
+      top: 20px;
+   }
+   .aside .nav
+   {
+      margin-top: 30px;
+   }
+}
+
+/* High DPI display improvements */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+{
+   .home .home-img img
+   {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+   }
+   .portofolio .portofolio-item-inner .portofolio-img img
+   {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+   }
+}
+
+/* Print styles */
+@media print
+{
+   .aside,
+   .style-switcher,
+   .nav-toggler
+   {
+      display: none !important;
+   }
+   .section
+   {
+      position: static !important;
+      left: 0 !important;
+      padding: 0 !important;
+   }
+   .section.active
+   {
+      display: block !important;
+   }
+   .section:not(.active)
+   {
+      display: none !important;
+   }
+}

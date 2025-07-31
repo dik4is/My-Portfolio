@@ -28,7 +28,7 @@ for(let i=0; i<totalNavList; i++)
         }
         this.classList.add("active")
         showSection(this);
-        if(window.innerWidth <1200)
+        if(window.innerWidth < 1200)
         {
             asideSectionTogglerBtn();
         }
