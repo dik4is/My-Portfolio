@@ -20,7 +20,7 @@ body
 {
    line-height: 1.5;
    font-size: 16px;
-   font-family: 'Poppins' sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 *
 {
@@ -211,7 +211,7 @@ ul
    top: 0;
    right: 0;
 }
-.aside .nav-toogler
+.aside .nav-toggler
 {
    height: 40px;
    width: 45px;
